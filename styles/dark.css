@@ -16,11 +16,14 @@
   --paragraph-color: #f1b2ce;
 }
 
+.page.theme_dark .page {
+  background-attachment: fixed;
+}
+
 .page.theme_dark .header {
   background-image: url(../images/cover-image-dark.png);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 .page.theme_dark .header__theme-menu-button {

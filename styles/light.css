@@ -26,13 +26,13 @@
 
   .page {
     background-color: var(--bg-color);
+    background-attachment: fixed;
   }
 
   .header {
     background-image: url(../images/cover-image-light.png);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
   }
 
   .header__title {
@@ -133,11 +133,14 @@
   }
 }
 
+.page.theme_light .page {
+  background-attachment: fixed;
+}
+
 .page.theme_light .header {
   background-image: url(../images/cover-image-light.png);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 .page.theme_light .header__title {
