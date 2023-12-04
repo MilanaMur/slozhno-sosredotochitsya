@@ -9,15 +9,84 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 
-/* .page.theme_dark {
+.page.theme_dark {
   --bg-color: #000028;
+  --title-bg-color: #ff0070;
   --accent-color: #ff0070;
   --paragraph-color: #f1b2ce;
 }
 
-.header {
+.page.theme_dark .header {
   background-image: url(../images/cover-image-dark.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-} */
+}
+
+.page.theme_dark .header__theme-menu-button {
+  color: var(--accent-color);
+}
+
+.page.theme_dark .header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.page.theme_dark .header__theme-menu-button:focus {
+  outline: none;
+}
+
+.page.theme_dark .header__theme-menu-button:focus-visible {
+  border-block-start: 1px solid transparent;
+  border-inline-start: 1px solid transparent;
+  border-inline-end: 1px solid transparent;
+  border-block-end: 1px solid #ff0070;
+}
+
+.page.theme_dark .header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.page.theme_dark .header__title {
+  color: #db00ff;
+  text-shadow: 4px 4px 0 #ff0070;
+}
+
+.page.theme_dark .footer_title {
+  color: #db00ff;
+  text-shadow: 2px 2px 0px #ff0070;
+}
+
+.page.theme_dark .header__title-decor {
+  color: var(--bg-color);
+}
+
+.page.theme_dark .title-decor {
+  color: var(--bg-color);
+}
+
+.page.theme_dark .title-decor_less-weight {
+  color: var(--bg-color);
+}
+
+.page.theme_dark .content__link {
+  text-shadow: 1px 1px 0 var(--accent-color);
+}
+
+.page.theme_dark .content__link:focus {
+  outline: none;
+}
+
+.page.theme_dark .content__link:focus-visible {
+  border: 1px solid #f1b2ce;
+}
+
+.page.theme_dark .content__link:hover {
+  border-block-end: 1px solid #f1b2ce;
+}
+
+@media (width >=768px) {
+  .page.theme_dark .content__link {
+    text-shadow: 2px 2px 0 var(--accent-color);
+  }
+}

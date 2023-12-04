@@ -9,18 +9,226 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 
-/* .page.theme_light {
-  
+.page.theme_light {
   --bg-color: #fff1f7;
   --title-bg-color: #ff8dcb;
   --accent-color: #ff8dcb;
   --paragraph-color: #353430;
 }
 
-.header__pseudo-rec::before {
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #fff1f7;
+    --title-bg-color: #ff8dcb;
+    --accent-color: #353430;
+    --paragraph-color: #353430;
+  }
+
+  .page {
+    background-color: var(--bg-color);
+  }
+
+  .header {
+    background-image: url(../images/cover-image-light.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .header__title {
+    color: #ffc2e6;
+    text-shadow: 4px 4px 0px #ff8dcb;
+  }
+
+  .header__theme-menu-button {
+    color: var(--paragraph-color);
+    border: 1px solid transparent;
+    background-color: transparent;
+  }
+
+  .header__theme-menu-button:hover {
+    border: 1px solid rgba(50, 49, 45, 0.4);
+  }
+
+  .header__theme-menu-button:focus {
+    outline: none;
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-block-start: 1px solid transparent;
+    border-inline-start: 1px solid transparent;
+    border-inline-end: 1px solid transparent;
+    border-block-end: 1px solid #353430;
+  }
+
+  .header__theme-menu-button_active {
+    border: 1px solid var(--paragraph-color);
+    pointer-events: none;
+  }
+
+  .header__pseudo-rec::before {
+    content: none;
+  }
+
+  .header__pseudo-rec::after {
+    content: none;
+  }
+
+  .footer_title {
+    color: #ffc2e6;
+    text-shadow: 2px 2px 0px #ff8dcb;
+  }
+
+  .header__title-decor {
+    color: var(--paragraph-color);
+    background-color: var(--title-bg-color);
+  }
+
+  .title-decor {
+    color: var(--paragraph-color);
+    background-color: var(--title-bg-color);
+  }
+
+  .title-decor_less-weight {
+    color: var(--paragraph-color);
+    background-color: var(--title-bg-color);
+  }
+
+  .content__title {
+    color: var(--accent-color);
+  }
+
+  .content__text {
+    color: var(--paragraph-color);
+  }
+
+  .content__link {
+    text-shadow: 1px 1px 0 #ff8dcb;
+  }
+
+  .content__link:focus {
+    outline: none;
+  }
+
+  .content__link:focus-visible {
+    border: 1px solid #353430;
+  }
+
+  .content__link:hover {
+    border-block-end: 1px solid #353430;
+  }
+
+  @media (width >= 1024px) {
+    .header__title {
+      text-shadow: 4px 4px 0px #ff0070;
+    }
+
+    .footer_title {
+      text-shadow: 2px 2px 0px #ff0070;
+    }
+
+    .content__link {
+      text-shadow: 2px 2px 0 #ff8dcb;
+    }
+  }
+}
+
+.page.theme_light .header {
+  background-image: url(../images/cover-image-light.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.page.theme_light .header__title {
+  color: #ffc2e6;
+  text-shadow: 4px 4px 0px #ff8dcb;
+}
+
+.page.theme_light .header__theme-menu-button {
+  color: var(--paragraph-color);
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.page.theme_light .header__theme-menu-button:hover {
+  border: 1px solid rgba(50, 49, 45, 0.4);
+}
+
+.page.theme_light .header__theme-menu-button:focus {
+  outline: none;
+}
+
+.page.theme_light .header__theme-menu-button:focus-visible {
+  border-block-start: 1px solid transparent;
+  border-inline-start: 1px solid transparent;
+  border-inline-end: 1px solid transparent;
+  border-block-end: 1px solid #353430;
+}
+
+.page.theme_light .header__theme-menu-button_active {
+  border: 1px solid var(--paragraph-color);
+  pointer-events: none;
+}
+
+.page.theme_light .header__pseudo-rec::before {
   content: none;
 }
 
-.header__pseudo-rec::after {
+.page.theme_light .header__pseudo-rec::after {
   content: none;
-} */
+}
+
+.page.theme_light .top-decorative-corner {
+  border-block-start: 1px solid var(--paragraph-color);
+  border-inline-end: 1px solid var(--paragraph-color);
+}
+
+.page.theme_light .bottom-decorative-corner {
+  border-inline-start: 1px solid var(--paragraph-color);
+  border-block-end: 1px solid var(--paragraph-color);
+}
+
+.page.theme_light .header__title-decor,
+.page.theme_light .content__title,
+.page.theme_light .title-decor,
+.page.theme_light .title-decor_less-weight {
+  color: var(--paragraph-color);
+}
+
+.page.theme_light .footer_title {
+  color: #ffc2e6;
+  text-shadow: 2px 2px 0px #ff8dcb;
+}
+
+.page.theme_light .content__link {
+  text-shadow: 1px 1px 0 #ff8dcb;
+}
+
+.page.theme_light .content__link:focus {
+  outline: none;
+}
+
+.page.theme_light .content__link:focus-visible {
+  border: 1px solid #353430;
+}
+
+.page.theme_light .content__link:hover {
+  border-block-end: 1px solid #353430;
+}
+
+@media (width >= 768px) {
+  .page.theme_light .content__link {
+    text-shadow: 2px 2px 0 #ff8dcb;
+  }
+}
+
+@media (width >= 1024px) {
+  .page.theme_light .header__title {
+    text-shadow: 4px 4px 0px #ff0070;
+  }
+
+  .page.theme_light .footer_title {
+    text-shadow: 2px 2px 0px #ff0070;
+  }
+}
