@@ -52,7 +52,7 @@
   border-block-start: 1px solid transparent;
   border-inline-start: 1px solid transparent;
   border-inline-end: 1px solid transparent;
-  border-block-end: 1px solid #ff0070;
+  border-block-end: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button_active {
@@ -101,7 +101,7 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   color: #db00ff;
-  text-shadow: 4px 4px 0 #ff0070;
+  text-shadow: 4px 4px 0 var(--accent-color);
   padding-block-end: 55px;
 }
 
@@ -121,7 +121,7 @@
   font-family: "IBM Plex Mono", monospace;
   line-height: 82.5%;
   color: #db00ff;
-  text-shadow: 2px 2px 0px #ff0070;
+  text-shadow: 2px 2px 0px var(--accent-color);
   text-align: center;
   align-self: center;
   justify-self: center;
@@ -236,7 +236,7 @@
 
 .content__link {
   text-decoration: none;
-  text-shadow: 1px 1px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
   font-family: inherit;
   border: 1px solid transparent;
 }
@@ -246,11 +246,11 @@
 }
 
 .content__link:focus-visible {
-  border: 1px solid #f1b2ce;
+  border: 1px solid var(--paragraph-color);
 }
 
 .content__link:hover {
-  border-block-end: 1px solid #f1b2ce;
+  border-block-end: 1px solid var(--paragraph-color);
 }
 
 .content__about,
@@ -323,10 +323,6 @@
   .content {
     gap: 80px;
     padding-inline-start: 20px;
-  }
-
-  .content__link {
-    text-shadow: 2px 2px 0 var(--accent-color);
   }
 
   .content__column-1 {

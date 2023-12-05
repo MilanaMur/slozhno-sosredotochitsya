@@ -22,7 +22,7 @@
   border-block-start: 1px solid transparent;
   border-inline-start: 1px solid transparent;
   border-inline-end: 1px solid transparent;
-  border-block-end: 1px solid #ff0070;
+  border-block-end: 1px solid var(--accent-color);
 }
 
 .page.theme_dark .header__theme-menu-button_active {
@@ -40,12 +40,12 @@
 
 .page.theme_dark .header__title {
   color: #db00ff;
-  text-shadow: 4px 4px 0 #ff0070;
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .page.theme_dark .footer_title {
   color: #db00ff;
-  text-shadow: 2px 2px 0px #ff0070;
+  text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 .page.theme_dark .header__title-decor {
@@ -69,11 +69,5 @@
 }
 
 .page.theme_dark .content__link:hover {
-  border-block-end: 1px solid #f1b2ce;
-}
-
-@media (width >=768px) {
-  .page.theme_dark .content__link {
-    text-shadow: 2px 2px 0 var(--accent-color);
-  }
+  border-block-end: 1px solid var(--paragraph-color);
 }
