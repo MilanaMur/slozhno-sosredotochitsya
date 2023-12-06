@@ -7,15 +7,16 @@
 }
 
 .header {
-  block-size: 100vh;
+  block-size: 100dvb;
   min-block-size: 668px;
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 10px;
   margin-block-end: 40px;
 }
 
 .header__theme-menu {
-  grid-column: 2;
+  grid-column: 3;
   justify-self: end;
   margin-block-start: 40px;
   padding-block-end: 65px;
@@ -62,7 +63,7 @@
 
 .header__pseudo-rec {
   position: relative;
-  grid-column: 2;
+  grid-column: 3;
   justify-self: end;
   inline-size: 25px;
   block-size: 25px;
@@ -85,7 +86,6 @@
 .header__pseudo-rec::after {
   content: "";
   position: absolute;
-  /* inset: 0; */
   top: 30%;
   left: 30%;
   inline-size: 9px;
@@ -107,7 +107,7 @@
 
 .header__title-decor {
   height: min-content;
-  grid-column: span 2;
+  grid-column: span 3;
   background-color: var(--title-bg-color);
   color: var(--bg-color);
   font-family: "IBM Plex Mono", monospace;
@@ -162,16 +162,9 @@
 .bottom-decorative-corner {
   position: relative;
   grid-column: 1;
+  align-self: end;
   inline-size: 25px;
   block-size: 25px;
-  justify-items: end;
-  align-self: end;
-}
-
-.bottom-decorative-corner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
   border-inline-start: 1px solid var(--accent-color);
   border-block-end: 1px solid var(--accent-color);
 }
@@ -287,6 +280,7 @@
 
 @media (width >= 768px) {
   .header {
+    min-block-size: 1024px;
     padding: 20px;
     margin-block-end: 60px;
   }
@@ -311,9 +305,9 @@
 
   .header__title-decor {
     justify-self: end;
-    inline-size: 56%;
-    grid-column: 3/4;
-    margin-block-end: 135px;
+    inline-size: 75%;
+    grid-column: 2/4;
+    margin-block-end: 140px;
   }
 
   .footer_title {
@@ -387,11 +381,17 @@
 
   .footer {
     padding: 20px;
+    min-block-size: 1024px;
   }
 }
 
 @media (width >= 1024px) {
+  .header {
+    min-block-size: 768px;
+  }
+
   .header__theme-menu {
+    grid-column: 2;
     justify-self: center;
     align-self: center;
     margin-block-start: 0;
@@ -403,7 +403,7 @@
   }
 
   .header__pseudo-rec {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 1;
   }
 
@@ -415,8 +415,8 @@
   }
 
   .header__title-decor {
-    inline-size: 67%;
-    grid-column: 3 / span 2;
+    inline-size: 75%;
+    grid-column: 2 / 4;
     grid-row: 3;
     margin-block-end: 113px;
   }
@@ -425,8 +425,8 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .header .top-decorative-corner {
-    grid-column: 4;
+  .header .bottom-decorative-corner {
+    align-self: end;
   }
 
   .content__column-1 {
@@ -447,5 +447,9 @@
 
   .content__advice .content__column-2 {
     margin-inline-start: 8px;
+  }
+
+  .footer {
+    min-block-size: 768px;
   }
 }
