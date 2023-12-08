@@ -62,7 +62,7 @@
     content: none;
   }
 
-  .top-decorative-corner {
+  .top-decorative-corner::after {
     border-block-start: 1px solid var(--paragraph-color);
     border-inline-end: 1px solid var(--paragraph-color);
   }
@@ -175,7 +175,7 @@
   content: none;
 }
 
-.page.theme_light .top-decorative-corner {
+.page.theme_light .top-decorative-corner::after {
   border-block-start: 1px solid var(--paragraph-color);
   border-inline-end: 1px solid var(--paragraph-color);
 }
